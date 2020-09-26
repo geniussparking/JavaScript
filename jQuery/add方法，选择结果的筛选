@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>demo</title>
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<script type="text/javascript">
+$(function(){
+   /*alert($('#div1').length);
+   $('#div1').css('background','red').css('font-size','20px').css('color','blue');//选择多个css样式
+ 
+   //向jQuery对象中添加更多的元素主要就是使用jQuery对象中的add方法！
+   alert($('#div1').add('#div2').length);//输出长度为2
+   alert($('#div1').add('#div2,#div4').length);//输出长度为3
+    
+   //注意点：add方法不会改变原来的jQuery对象，而是返回新的jQuery对象
+    alert($('#div1').add('#div2,#div4').length);//添加元素，其实是在原来的基础上，返回一个新的jQuery对象（这个jQuery对象里面被添加的新的元素）
+    alert($('#div1').length);//原来的jQuery对象，并不会受到影响
+    
+   
+   var div124=$('#div1').add('#div2,#div4');
+   alert($(div124).length);
+   $(div124).css('color','red');
+     
+   var div13=$('#div1,#div3');
+   var div56=$('#div5,#div6');
+   alert(div13.length);//这里的div13本来就是jQuery对象，不用再调用jQuery函数？？？？
+   alert($(div56).length);
+   alert($(div13).add(div56).add($('#div4')).length);
+   
+    
+    var $div1=$('#div1');//注意变量被命名为$div1，这里不是调用jQuery函数
+    var $div24=$('#div2,#div4');
+    alert($div1.add($div24).length);
+   
+   //对结果进行筛选,注意点：这些操作不会改变原来的jQuery对象，而是返回新的jQuery对象
+   var divs=$('div');
+   alert(divs.length);
+   alert(divs.first().length);//获得第一个元素；
+   alert(divs.last().length);//获得最后一个元素
+   divs.first().css('color','blue');//改变第一个元素的css样式;
+   divs.last().css('background','red');//改变最后一个元素的背景为red
+   divs.eq(3).css('font-size','30px').css('color','pink');//改变第四个元素的css样式：字体大小和颜色
+   divs.eq(-4).css('font-size','50px').css('color','green');//倒数第四个，可以传进去负数;
+    */
+   //$('ul li').slice(1,3).css('background','green');//从第二条开始取，取2和3两条，不包括第四条结束这一条;
+   
+   //$('ul li').slice(2,6).css('color','green');//从第三条开始取，取3到6条，不包括第七条结束这一条;
+   //$('ul li').slice(3).css('color','blue');//不传第二个值，从第四条开始取，一直取完;
+   
+   //$('ul li').slice(-3).css('color','blue');//从倒数第三取到最后;
+   //传负数，请大家看下面的 箭头向下的图！
+  // $('ul li').slice(-3,-1).css('color','yellow');//从倒数第三取到倒数第二，倒数第一不取;
+   $('#div1').css('background','pink').add('#div2,#div3').css('color','red');//add()的综合性操作
+   
+}); 
+</script>
+<ul>
+    <li>嘿嘿    |0     ↑-8</li>
+    <li>嘿嘿    |1     |-7</li>
+    <li>嘿嘿    |2     |-6</li>
+    <li>嘿嘿    |3     |-5</li>
+    <li>嘿嘿    |4     |-4</li>
+    <li>嘿嘿    |5     |-3</li>
+    <li>嘿嘿    |6     |-2</li>
+    <li>嘿嘿    ↓7     |-1</li>
+</ul>
+<div id="div1">div1</div>
+<div id="div2">div2</div>
+<div id="div3">div3</div>
+<div id="div4">div4</div>
+<div id="div5">div5</div>
+<div id="div6">div6</div>
+</body>
+</html>

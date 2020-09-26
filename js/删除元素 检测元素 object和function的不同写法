@@ -1,0 +1,37 @@
+
+
+var obj4={
+    name:'张三',
+    age:18,
+    func1:function(){
+        alert(this.name);
+        alert(this.age);
+    },
+    
+  };
+  obj4.func1(); //注意object和function的不同，object后面没有()，function就有。
+
+
+
+var obj5={
+    name:'王五',
+    age:18,
+    info:'王五是高富帅',
+  }
+  alert(obj5.name);
+  alert(obj5.age);
+  alert(obj5.info);
+  delete obj5.age;  //删除属性;
+  alert(obj5.age);
+  obj5.age=19;
+  alert(obj5.age);
+    
+
+  
+  var obj6={
+    name:'张三',
+    func1:function(){
+        alert(this.name);
+    },
+  };
+  alert('name' in obj6);   //检测某个对象里是否含有某个属性或方法。

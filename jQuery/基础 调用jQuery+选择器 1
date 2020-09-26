@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>demo</title>
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+   /* $(function(){
+        alert('我是第一个jQuery函数！')
+        });
+       
+    
+     jQuery.noConflict();   //这样可以让jQuery放弃使用$简写符号。
+     var new$=jQuery.noConflict();//改变简写符号为 new$.
+       
+   $(function(){
+    var div1=document.getElementById('div1');//获取元素
+    div1.style.background='red';//改变样式
+    div1.style.height='100px';
+    div1.style.color='blue';
+    div1.style.fontSize='20px';
+    });
+
+   
+  $(document).ready(function(){//传入document对象，再调用ready这个方法，调用的时候可以传一个函数进去，哎呀，好绕！
+    alert('页面加载完毕才会执行这个函数！传入document对象，再调用ready这个方法，调用的时候可以传一个函数进去，哎呀，好绕！');
+   });
+   
+   $(function(){
+    alert('这个是要求页面加载完毕的简写方式！')
+    });
+ 
+
+   //调用$函数，传入一个选择器，它返回的是一个对象（对象里面jQuery提供了很多的方法，和属性所以我们也称为jQuery对象）
+   // 比如有一个length这个属性：这个jQuery对象里面有多少元素
+   
+   $(function(){  //这里是简写加载完后再执行
+     console.log($('#div1 *').length);  //返回元素个数，直接数有多少个元素。
+     console.log($('*').length);
+    });
+     
+   $(function(){
+    alert($('[href]').length);  //属性选择器，数组形式，这样可以输出有多少个属性是href的元素
+    alert($('[href="http://baidu.com"]').length); //输出属性值是特定值的元素个数
+    
+    });
+    
+   
+   $(function(){  //选取attr属性值以字符串li开头的元素
+    alert($('[class^="li"]').length);
+    alert($('[href^="http://sina"]').length);
+    
+    });
+    /*
+    //选取attr属性值以字符串val结尾的元素
+    alert($('[class$="s"]').length);
+    */
+    
+    /*
+    //选取attr属性值包含字符串val的元素
+    alert($('[class*="1"]').length);
+    */
+    
+    /*
+    //选取attr属性其中一个值是字符串val的元素
+    alert($('[class~="sunli"]').length);
+    */
+    
+    /*
+    //选取attr属性值等于字符串val，或属性值为连字符分隔的值列表且第一个值是字符串val的元素
+    alert($('[class|="ps"]').length);
+    */
+    
+    /*
+    //复合属性选择器，需要同时满足多个条件时使用
+    alert($('[href="http://baidu.com"][target="_blank"]').length);
+    */
+    
+    /*
+    //属性选择器可以配合其他选择器使用！
+    alert($('div[class="divs"]').length);
+    */
+    $(function(){
+      alert($('div a[class="links"]').length);
+      alert($('div p[class|="ps"]').length);
+      alert($('div p[class~="zhangsan"]').length); //选取attr属性其中一个值是字符串val的元素,需要完全匹配其中一个value
+      alert($('div p[class*="s"]').length);//选取attr属性值包含字符串val的元素
+      });
+</script>
+<div id="div1">
+    div1
+    <a></a>
+<p></p>
+</div>
+<div>
+  <a href="http://baidu.com">百度</a>
+<a href="http://baidu.com">百度</a>
+<a href="http://baidu.com">百度</a>
+<a href="http://google.com">google</a>
+<a href="http://baidu.com">百度</a>
+
+</div>
+<div>
+<a class="link" href="http://sina.com.cn">sina</a>
+<a class="ink" href="http://www.sina.com.cn">sina</a>
+<a class="ink" href="http://www.sina.com.cn">sina</a>
+<a class="links" href="http://sina.com.cn">sina</a>
+<a class="links" href="http://sina.com.cn">sina</a>
+<a class="link" href="http://sina.com.cn">sina</a>
+</div>
+<div id="div1">
+    <p class="ps sunshengli zhangsan"></p>
+    <a class="p1s"></a>
+    <p class="ps sunshengli"></p>
+    <p class="ps"></p>
+    <p class="ps"></p>
+    <p class="ps-2"></p>
+    <p class="ps-3"></p>
+    <p class="p1sss"></p>
+    <p class="p2"></p>
+</div>
+<a href="http://baidu.com" target="_blank">库</a>
+<a href="http://baidu.com" target="_blank">库</a>
+<a href="http://baidu.com">库</a>
+<a href>库</a>
+</body>
+</html>

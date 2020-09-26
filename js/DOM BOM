@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>demo</title>
+</head>
+<body>
+<script type="text/javascript">
+/*
+
+//window.confirm('确定删除吗？');  这里点击确定，返回true,点击取消，返回false.
+var a=window.confirm('确定删除吗？'); //将返回值传给a
+alert(a);//将a输出，若点击确定，则得到true；若点击取消，则得到false
+
+
+var a=window.prompt('请输入信息!');  //prompt得到的数据传给a
+alert(a);//输出a
+
+
+window.open('http://google.com');//在新窗口打开链接；
+
+window.open('http://google.com','a1');//a1是给新的窗口命名
+setTimeout("window.open('http://baidu.com','a1')",3000); //先打开谷歌，后打开百度。同一个窗口，因为窗口名都是a1
+
+window.open('http://google.com','_self');//在当前窗口打开
+
+window.open('http://google.com','_blank');//在新窗口打开；'_blank'不写，系统默认也是新窗口打开
+
+
+window.open('http://google.com','_blank','width=300px, height=300px,left=200px,top=300px,scrollbars=yes');
+
+var a1=window.open('http://google.com','_blank','width=300px, height=300px,left=200px,top=300px,scrollbars=yes');
+setTimeout("a1.close()",3000);   //三秒后关闭掉打开的窗口
+
+window.alert(screen.height);
+window.alert(screen.width);//输出屏幕长宽
+
+
+setTimeout("location.href='http://baidu.com'",2000);//重定向
+
+location.href='http://baidu.com';
+location.assign("http://google.com");  //重定向的两种方法
+
+alert(navigator.userAgent);  //输出浏览器信息
+
+var liulanqi=navigator.userAgent; 
+alert(liulanqi.toUpperCase());//输出浏览器信息，并且转换为大写。
+
+
+var liulanqi=navigator.userAgent; 
+var LIULANQI=liulanqi.toUpperCase();
+if(LIULANQI.indexOf('FIREFOX')>-1)
+{
+    alert('您使用的是火狐浏览器！');  //判断浏览器是火狐，并且输出；
+}
+
+
+
+function chro(){
+    var agent=navigator.userAgent;
+    var AGENT=agent.toUpperCase();
+    if(AGENT.indexOf('CHROME')>-1)
+         {
+        alert('您使用的是谷歌浏览器！')
+          }
+    }
+chro();
+
+function fire(){
+    var agent=navigator.userAgent;
+    var AGENT=agent.toUpperCase();
+    if(AGENT.indexOf('FIREFOX')>-1)
+         {
+        alert('您使用的是火狐浏览器！')
+          }
+    }
+fire();
+
+
+*/
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

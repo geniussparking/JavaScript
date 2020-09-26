@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>demo</title>
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<script type="text/javascript">   //注意多练习，写写写～～～
+  /*
+  
+  $(document).ready(function(){
+      alert('我是第一个jQuery函数！');
+      $('#ul1 li').click(function(){   //注意函数嵌套的逻辑，先找到要操作的元素，然后调用某个方法，再嵌套函数，执行动作。
+            $(this).fadeOut('slow');
+         });
+   });
+*/
+  /*
+  $(function(){
+      var $lis=$('ul li');//传入一个选择器
+     alert($lis.length);
+     alert($lis.filter('#li2').length);
+     alert($lis.filter(':gt(2)').length);//注意一条，对象.方法
+   });
+*/
+  /*
+ $(function(){
+ //传入html元素对象
+ var $lis=$('ul li');
+ alert($('ul li').length);
+ var li2=document.getElementById('li2');
+ var $newLis=$lis.filter(li2);
+  alert($lis.filter(':gt(2)').length);//对象 方法
+  alert($newLis.length);
+  alert($lis.length);
+ });
+ 
+  */
+  
+  //传入jQuery对象，得到原始集合与参数jQuery对象所含元素集合的交集
+ 
+ /* $(function(){
+      alert($('ul li').filter(':gt(2)').length);
+      alert($('ul li').length);
+      });
+  */
+ 
+ //传入一个函数,原来的jQuery对象里含有多少个元素，传入的函数就执行多少次。
+ //如果函数返回的是true，那么对应的元素就留下来；如果返回的是false或者不返回，则对应的元素则删除;
+ /*$(function(){
+      $('ul li').filter(function(i){//这里的函数执行8次
+         alert(i);
+         });
+      });
+
+ $(function(){
+   var $newLis=$('ul li').filter(function(i){
+         return false;
+      });
+   alert($newLis.length);
+   });
+ */
+ 
+ /*
+ //传入一个函数,原来的jQuery对象里含有多少个元素，传入的函数就执行多少次。
+ //如果函数返回的是true，那么对应的元素就留下来；如果返回的是false或者不返回，则对应的元素则删除;
+$(function(){
+  var $newLis=$('ul li').filter(function(){
+      if (this.id=='li2'){
+         return true;        
+      }else {
+         return false;
+      }
+      });
+   alert($newLis.length);
+   $newLis.css('background','red');   
+   });
+*/
+ 
+ /*
+$(function(){
+   var $newLis1=$('ul li').filter(function(){ //有多少个li,filter里面的函数执行多少次。
+         if (this.id=='li2') {
+               return false;
+         }else {
+            return true;
+         }
+      });
+   alert($newLis1.length);
+   $newLis1.css('color','blue');
+   });
+*/
+ 
+ 
+ //not方法与filter方法正好相反
+/*
+ $(function(){
+   var $notLis=$('ul li').not('#li2');
+   alert($notLis.length);
+   $notLis.css('color','blue');
+   });
+
+$(function(){
+   var $notLis=$('ul li').not(':gt(2)');
+   alert($notLis.length);
+   $notLis.css('background','red');
+   });
+ */
+/*
+$(function(){
+   var lis=document.getElementById('li2');
+   alert($('ul li').not(lis).length);
+   $('ul li').not(lis).css('background','pink');
+   });
+ */
+
+/*
+//has,如果jQuery对象中的元素的后代，与传入的选择器 匹配 那么对应的元素就留下来！
+$(function(){
+   alert($('div').has('p').length);
+   alert($('div').has('a').length);
+   $('div').has('a').css('background','red');
+   alert($('ul').has('#li2').length);
+   $('ul').has('#li2').css('background','blue');//注意是整个ul都会被改变样式
+   });
+*/
+
+
+//如果元素内部有符合传入选择器的元素那么返回的就是true否则返回的就是false
+$(function(){
+//alert($('ul li').is('#li2'));  //有id=li2，返回true
+var a=$('ul li').is(function(){ //传入函数
+if (this.id=='li2'){
+   return true;
+}else {
+   return false;
+}
+});
+alert(a);
+});
+ </script>
+<ul id="ul1">
+    <li>嘿嘿    0</li>
+    <li>嘿嘿    1</li>
+    <li id="li2">嘿嘿    2</li>
+    <li>嘿嘿    3</li>
+    <li>嘿嘿    4</li>
+    <li>嘿嘿    5</li>
+    <li>嘿嘿    6</li>
+    <li>嘿嘿    7</li>
+</ul>
+
+<ul>
+    <li>嘿嘿    0</li>
+    <li>嘿嘿    1</li>
+    <li>嘿嘿    2</li>
+    <li>嘿嘿    3</li>
+    <li>嘿嘿    4</li>
+    <li>嘿嘿    5</li>
+    <li>嘿嘿    6</li>
+    <li>嘿嘿    7</li>
+</ul>
+<div>
+    <p>
+        <a href="">私房库</a>
+    </p>
+</div>
+<div>
+    <p>
+        <a href="">私房库</a>
+    </p>
+</div>
+<div>
+    <p>
+        私房库
+    </p>
+</div>
+<div>
+    <p>
+        私房库
+    </p>
+</div>
+</body>
+</html>

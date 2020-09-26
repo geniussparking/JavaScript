@@ -1,0 +1,33 @@
+var a=100;
+var b=100;
+(a<b) ? alert('真的') : alert('假的');
+(a==b) ? alert('真的') : alert('假的');
+
+
+var a=100;
+var b='100';//=是赋值操作；
+alert(a==b);//==数值相等就行； 输出true
+alert(a===b);  //===数值要相等，类型也要相等；输出false
+
+
+var a='长的帅的';
+var b='起得早！';
+var i=100;
+var j=11;
+alert(a+b); //输出a和b的字符串；
+alert(i+j); //输出111；
+//+号可以连接字符，也可以进行加法运算。
+
+
+
+var a=100;
+var b='100';
+a===b ? alert('真的！') : alert('假的！');//注意==，===，字符串。数值的区别； 
+//三元运算符
+
+
+var str1="zhangsan";
+alert(str1.substring(2,5));  //输出ang
+str1.name='zhangshan'; //输出undefined
+alert(str1.name);
+

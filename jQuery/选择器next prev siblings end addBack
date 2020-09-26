@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>demo</title>
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<script type="text/javascript">
+$(function(){
+     //取得一个包含匹配的元素集合中每一个元素紧邻的下一个同辈元素的元素集合
+    //可以传入选择器进行筛选
+ /*  $('div').css('color','red');
+   $('div').next().css('color','blue');
+   $('div').next('p').css('background','pink');
+   */
+ 
+    //查找当前元素之后所有的同辈元素，直到（但不包括）遇到匹配的那个元素才停止。
+ //$('#ul1 li:eq(1)').nextAll().css('color','blue');
+ //$('#ul1 li:eq(1)').nextUntil('#li5').css('color','red');
+ // $('#ul1 li:eq(1)').nextUntil('#li5','.lis').css('color','red'); //第二个参数可选，可以对结果进行过滤
+
+    //取得一个包含匹配的元素集合中每一个元素紧邻的前一个同辈元素的元素集合
+   // $('div').prev().css('background','red');
+  //$('div').prev('span').css('background','red'); //可以传入选择器进行筛选
+  
+  //取得一个包含匹配的元素集合中每一个元素的所有同辈元素的元素集合
+    //可以传入选择器进行筛选
+ // $('#li5').siblings().css('background','red'); 
+  //$('body').find('div').css('color','blue').end().find('p').css('color','red');//使用end方法得到上一个结果集
+  $('#ul1').children().addBack().css('color','red');
+});
+</script>
+<p>我是段落</p>
+<ul id="ul1">
+    <li>嘿嘿    0</li>
+    <li>嘿嘿    1</li>
+    <li class="lis">嘿嘿    2</li>
+    <li>嘿嘿    3</li>
+    <li class="lis">嘿嘿    4</li>
+    <li id="li5">嘿嘿    5</li>
+    <li>嘿嘿    6</li>
+    <li>嘿嘿    7</li>
+</ul>
+<p>我是段落</p>
+<div>div</div>
+<p>我是段落</p>
+<div>div</div>
+<p>我是段落</p>
+<div>div</div>
+<p>我是段落</p>
+<div>div</div>
+<p>我是段落</p>
+<p>我是段落</p>
+<div>div</div>
+<span>我是span</span>
+<div>div</div>
+</body>
+</html>

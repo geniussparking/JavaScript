@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>demo</title>
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<script type="text/javascript">
+$(function(){
+    
+    /*
+    //获取jQuery对象中所有元素的子元素
+    $('ul').children().css('background','pink');
+    alert($('ul').children().length);
+    */
+    /*
+    //传入选择器，可以选择出你需要的选择器！
+    $('ul').children(':gt(2)').css('background','pink');
+    alert($('ul').children(':gt(2)').length);
+    */
+    
+    /*
+    //find(),从后代元素中寻找某些元素！
+    //alert($('ul').find('*').length);//获取到所有的后台
+    //alert($('ul').find('div').length);
+    */
+    
+    /*
+    //传入jQuery对象，将得到 所有后代元素与jQuery对象中所有元素的交集（公共的部分）
+    var $divs=$('div');
+    alert($('ul').find($divs).length);
+    */
+    
+    /*
+    //offsetParent()作用：用于获取祖先元素中举例最近的那个元素,此方法仅对可见元素有效(使用offsetParent这个方法的元素本身要可见)
+    $('#a1').offsetParent().css('background','pink');
+    */
+    
+    /*
+    //取得结果集内元素的父元素，可以通过一个可选的选择器进行筛选
+    $('a').parent('div').css('background','pink');
+    */
+    
+    /*
+    //取得结果集内元素的祖先元素，可以通过一个可选的选择器进行筛选。
+    $('#a1').parents().css('background','pink');
+    */
+    
+    /*
+    //查找当前元素的所有的祖先元素，直到（但不包括）遇到匹配的那个元素才停止
+    //第二个传入参数（可选）：选择器(对结果进行筛选)
+    $('#a1').parentsUntil('body','div').css('background','pink');
+    */
+    
+    
+});
+</script>
+<ul id="ul1">
+    <li>嘿嘿    0</li>
+    <li>嘿嘿    1</li>
+    <li>嘿嘿    2</li>
+    <li>嘿嘿    3</li>
+    <li>嘿嘿    4</li>
+    <li>嘿嘿    5</li>
+    <li>嘿嘿    6</li>
+    <li>嘿嘿    7
+        <div></div>
+        <div></div>
+        <div></div>
+    </li>
+</ul>
+<div></div>
+<div></div>
+<div><a href="http://sifangku.com">私房库</a></div>
+<div style="position:absolute;">
+    <div>
+        <div style="position:absolute;">
+            <p>
+                <a id="a1" href="http://sifangku.com">私房库</a>
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

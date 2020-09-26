@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>demo</title>
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<script type="text/javascript">
+    /*$(function(){
+        alert($('div p').length);  //在给定的祖先元素下匹配所有的后代元素，包括所有的子子孙孙
+        });
+       
+    $(function(){
+        alert($('div >p').length);  //在给定的祖先元素下匹配所有的子元素，不是所有的后代
+        });
+        
+    $(function(){
+        alert($('div+p').length);  //紧接在div后面是p的元素
+        alert($('p+a').length);
+        });
+        
+    $(function(){
+        alert($('#div1~p').length); //匹配所有在<selector1>元素之后的所有与<selector1>同辈<selector2>元素
+        });
+      
+   
+    $(function(){
+        alert($('#title1 :checked').length);  //用于表单中，匹配所有被选中元素（复选框、单选框等，不包括select中的option）
+        alert($(':disabled').length);  //获取不能填写的text文本框的元素个数
+        alert($(':required').length);
+        alert($('#title1 :empty').length);  //既不包含子元素 也不包含文本的空元素，单标签会算在内，就是标签开始结束中间没有内容和单标签都算
+        });
+    
+   $(function(){
+        
+        $('ul li:first-child').css('font-size','120px');//选择第一个
+        $('ul li:nth-child(even)').css('font-size','50px'); //偶数
+        }); 
+     */
+    
+    
+     
+</script>
+<!--
+<div id="div100">
+    <p>ff</p>
+    <div>1</div>
+    <div>
+        <p>我没有兄弟元素</p>
+    </div>
+    <div>
+        <a>我没有兄弟元素</a>
+    </div>
+    <div><p>我没有兄弟元素</p></div>
+    <p>3</p>
+    <p>4</p>
+    <p>ff</p>
+    <a>5</a>
+    <span>6</span>
+    <a>7</a>
+</div>
+
+-->
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+</ul>
+
+
+
+
+
+<form id="form1">
+    <input type="text" required="required" />
+    <input type="text" required="required" />
+    
+    <input type="text" disabled="disabled" />
+    <input type="text" disabled="disabled" />
+    <div id="title1">
+        <div>您喜欢的运动是什么？</div>
+        A：跑步<input type="checkbox" />
+        B：羽毛球<input type="checkbox" />
+        C：网球<input type="checkbox" />
+        D：台球<input type="checkbox" />
+        E：篮球<input type="checkbox" />
+        <input type="radio">
+        <p></p>
+          <p></p>
+    </div>
+    <div id="title2">
+        <div>您喜欢的运动是什么？</div>
+        A：跑步<input type="checkbox" />
+        B：羽毛球<input type="checkbox" />
+        C：网球<input type="checkbox" />
+        D：台球<input type="checkbox" />
+        E：篮球<input type="checkbox" />
+    </div>
+    <input type="submit" />
+</form>
+
+
+
+
+<!--
+<div class="divs"></div>
+<div class="divs"></div>
+<p class="divs"></p>
+<div id="div1">
+<p></p>
+    <p class="ps sunshengli zhangsan"></p>
+    <a class="p1s"></a>
+    <p class="ps sunshengli"></p>
+    <p class="ps"></p>
+    <p class="ps"></p>
+    <p class="ps-2"></p>
+    <p class="ps-3"></p>
+    <p class="p1sss"></p>
+    <p class="p2"></p>
+    <div class="divs">
+        <p class="p2"></p>
+    </div>
+</div>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<div><p></p></div>
+<a href="http://sifangku.com" target="_blank">私房库</a>
+<a href="http://sifangku.com" target="_blank">私房库</a>
+<a href="http://sifangku.com">私房库</a>
+<a href>私房库</a>
+-->
+</body>
+</html>
+
+老师的代码部分：
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>demo</title>
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<script type="text/javascript">
+$(function(){
+    
+    /*
+    //在给定的祖先元素下匹配所有的后代元素
+    alert($('#div1 p').length);
+    */
+    
+    /*
+    //在给定的父元素下匹配所有的子元素
+    alert($('#div1>p').length);
+    */
+    
+    /*
+    //匹配所有紧接在 <selector1> 元素后的 <selector2>
+    alert($('p+a').length);
+    */
+    
+    /*
+    //匹配 所有在<selector1> 元素之后的所有同辈 <selector2> 元素
+    alert($('#div1~p').length);
+    */
+    
+    /*
+    //用于表单，匹配所有被选中元素(复选框、单选框等，不包括select中的option)
+    alert($('#title1 :checked').length);
+    */
+    
+    /*
+    //用于表单，匹配所有不可用元素
+    alert($(':disabled').length);
+    */
+    
+    /*
+    //主要用于表单，选取得到焦点的元素
+    setTimeout("alert($(':focus').length)",3000);
+    */
+    
+    /*
+    //用于表单，选取具有required属性的元素
+    alert($(':required').length);
+    */
+    
+    /*
+    //匹配所有既不包含子元素也不包含文本的空元素
+    alert($('#title1 :empty').length);
+    */
+    
+    /*
+    //选取第一个子元素
+    //alert($('ul li:first-child').length);
+    //$('ul li:first-child').css('font-size','120px');
+    */
+    
+    /*
+    //选取最后一个子元素
+    alert($('ul li:last-child').length);
+    */
+    
+    /*
+    //选取元素的第n个子元素(从1开始计数)n可为even或odd
+    $('ul li:nth-child(1)').css('font-size','120px');
+    $('ul li:nth-child(even)').css('font-size','120px');
+    */
+    
+    /*
+    //:nth-last-child(n)	选取元素的倒数第n个子元素
+    */
+    
+    /*
+    //选择同属于一个父元素之下，并且标签名相同的元素中的第n个(注：从1开始计数)
+    alert($('#div100 div:nth-of-type(2)').length);
+    $('p:nth-of-type(1)').css('background','pink');
+    */
+    
+    /*
+    //选择同属于一个父元素之下，并且标签名相同的元素中的倒数第n个
+    $('p:nth-last-of-type(1)').css('background','pink');
+    */
+    
+    /*
+    //如果某个元素是父元素中唯一的子元素，那将会被匹配
+    $('#div100 :only-child').css('background','pink');
+    $('p:only-child').css('background','pink');
+    */
+    
+    /*
+    //选择所有没有兄弟元素，且具有相同的元素名称的元素
+    $('a:only-of-type').css('color','red');
+    alert($('a:only-of-type').length);
+    */
+    
+    /*
+    //选取文档的根元素，在html文档中即是<html>元素
+    $(':root').css('background','pink');
+    */
+    
+});
+</script>
+<div id="div100">
+    <div>1</div>
+    <div>
+        <p>我没有兄弟元素</p>
+    </div>
+    <div>
+        <a>我没有兄弟元素</a>
+    </div>
+    <div><p>我没有兄弟元素</p></div>
+    <p>3</p>
+    <p>4</p>
+    <a>5</a>
+    <span>6</span>
+    <a>7</a>
+</div>
+
+
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+</ul>
+
+
+
+<form id="form1">
+    <input type="text" required="required" />
+    <input type="text" required="required" />
+    
+    <input type="text" disabled="disabled" />
+    <input type="text" disabled="disabled" />
+    <div id="title1">
+        <div>您喜欢的运动是什么？</div>
+        A：跑步<input type="checkbox" />
+        B：羽毛球<input type="checkbox" />
+        C：网球<input type="checkbox" />
+        D：台球<input type="checkbox" />
+        E：篮球<input type="checkbox" />
+        <input type="radio">
+        <p></p>
+    </div>
+    <div id="title2">
+        <div>您喜欢的运动是什么？</div>
+        A：跑步<input type="checkbox" />
+        B：羽毛球<input type="checkbox" />
+        C：网球<input type="checkbox" />
+        D：台球<input type="checkbox" />
+        E：篮球<input type="checkbox" />
+    </div>
+    <input type="submit" />
+</form>
+
+
+
+
+<!--
+<div class="divs"></div>
+<div class="divs"></div>
+<p class="divs"></p>
+<div id="div1">
+    <p class="ps sunshengli zhangsan"></p>
+    <a class="p1s"></a>
+    <p class="ps sunshengli"></p>
+    <p class="ps"></p>
+    <p class="ps"></p>
+    <p class="ps-2"></p>
+    <p class="ps-3"></p>
+    <p class="p1sss"></p>
+    <p class="p2"></p>
+    <div class="divs">
+        <p class="p2"></p>
+    </div>
+</div>
+<p></p>
+<p></p>
+<div><p></p></div>
+<a href="http://sifangku.com" target="_blank">私房库</a>
+<a href="http://sifangku.com" target="_blank">私房库</a>
+<a href="http://sifangku.com">私房库</a>
+<a href>私房库</a>
+-->
+</body>
+</html>
